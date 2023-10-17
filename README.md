@@ -33,13 +33,13 @@ WP_ADMIN_USER=mk
 
 WP_ADMIN_PWD=adpass
 
-WP_ADMIN_EMAIL= "<admin-email>"
+WP_ADMIN_EMAIL= "admin-email"
 
 WP_USER=wp_usr
 
 WP_PWD=wp_upass
 
-WP_EMAIL= "<wp-email>"
+WP_EMAIL= "wp-email"
 
 
 CERT_PATH=/etc/ssl/certs
