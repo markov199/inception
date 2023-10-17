@@ -22,12 +22,19 @@ It can be used for high-availability transaction data, analytics, as an embedded
 Add the .env file to the srcs folder
 
 /srcs:
+
 total XX
+
 drwxrwxr-x 3 wil wil 4096 avril 42 20:42 .
+
 drwxrwxr-x 3 wil wil 4096 avril 42 20:42 ..
+
 -rw-rw-r-- 1 wil wil XXXX avril 42 20:42 docker-compose.yml
+
 -rw-rw-r-- 1 wil wil XXXX avril 42 20:42 .env
+
 drwxrwxr-x 5 wil wil 4096 avril 42 20:42 requirements
+
 
 env file
 
