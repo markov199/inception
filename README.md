@@ -33,7 +33,7 @@ WP_ADMIN_USER=mk
 
 WP_ADMIN_PWD=adpass
 
-WP_ADMIN_EMAIL= "admin-email"
+WP_ADMIN_EMAIL= \<admin-email\>
 
 WP_USER=wp_usr
 
