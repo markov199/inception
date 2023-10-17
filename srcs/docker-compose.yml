@@ -1,0 +1,82 @@
+version: "3"
+  services:
+    nginx:
+      build:
+        context: ./requirements/nginx/
+        args:
+          CERT_PATH: ${CERT_PATH}
+          KEY_PATH: ${KEY_PATH}  
+      container_name: nginx
+      image: nginx
+      depends_on:
+        - wordpress
+      ports:
+        - "443:443"
+      volumes:
+        - wp-volume:/var/www/html
+      networks:
+        - inception
+      env_file:
+        - .env
+      restart: always
+      
+    mariadb:
+      container_name: mariadb
+      image: mariadb
+      build:
+        context: ./requirements/mariadb/
+        args:
+          DB_NAME: ${DB_NAME}
+          DB_USER: ${DB_USER}
+          DB_USER_PASS: ${DB_USER_PASS}
+          DB_ROOT: ${DB_ROOT}
+      expose:
+        - "3306"
+      volumes:
+        - db-volume:/var/lib/mysql
+      networks:
+        - inception
+      env_file:
+        - .env
+      restart: always
+
+    wordpress:
+      build:
+        context: ./requirements/wordpress/
+        args:
+          WP_ADMIN_USER: ${WP_ADMIN_USER}
+          WP_ADMIN_PWD: ${WP_ADMIN_PWD}
+          WP_ADMIN_EMAIL: ${WP_ADMIN_EMAIL}
+          WP_USER: ${WP_USER}
+          WP_PWD: ${WP_PWD}
+          WP_EMAIL: ${WP_EMAIL}
+      container_name: wordpress
+      image: wordpress
+      depends_on:
+        - mariadb
+      expose: 
+        - 9000
+      volumes:
+        - wp-volume:/var/www/html
+      networks:
+        - inception
+      env_file:
+        - .env
+      restart: always
+       
+  networks:
+    inception:
+      driver: bridge
+  volumes:
+    wp-volume:
+      driver: local  
+      driver_opts:
+        type: none
+        o: bind
+        device: /home/${USER}/data/wordpress
+    db-volume:
+      driver: local
+      driver_opts:
+        type: none
+        o: bind
+        device: /home/${USER}/data/mariadb
