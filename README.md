@@ -18,7 +18,7 @@ MariaDB Server is a general purpose open source relational database management s
 It can be used for high-availability transaction data, analytics, as an embedded server, and a wide range of tooling and applications support MariaDB Server.
 
 
-#.env file
+# env file
 
 
 DB_NAME=wordpress 
