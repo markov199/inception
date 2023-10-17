@@ -39,7 +39,7 @@ WP_USER=wp_usr
 
 WP_PWD=wp_upass
 
-WP_EMAIL= "wp-email"
+WP_EMAIL= \<wp-email\>
 
 
 CERT_PATH=/etc/ssl/certs
