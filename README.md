@@ -22,8 +22,11 @@ It can be used for high-availability transaction data, analytics, as an embedded
 
 
 DB_NAME=wordpress
+
 DB_USER=usr 
+
 DB_USER_PASS=upass
+
 DB_ROOT=root
 
 WP_ADMIN_USER=mk
