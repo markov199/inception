@@ -11,7 +11,7 @@ Though NGINX became famous as the fastest web server, the scalable underlying ar
 
 NGINX also is frequently placed between clients and a second web server, to serve as an SSL/TLS terminator or web accelerator. Acting as an intermediary, NGINX efficiently handles tasks that might slow down your web server, such as negotiating SSL/TLS or compressing and caching content to improve performance. Dynamic sites, built using anything from Node.js to PHP, commonly deploy NGINX as a content cache and reverse proxy to reduce load on application servers and make the most effective use of the underlying hardware.
 
-# MariaDB 
+# mariaDB 
 
 MariaDB Server is a general purpose open source relational database management system. It’s one of the most popular database servers in the world, with notable users including Wikipedia, WordPress.com and Google. MariaDB Server is released under the GPLv2 open source licence and is guaranteed to remain open source.
 
